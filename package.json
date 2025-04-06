@@ -1,0 +1,17 @@
+{
+  "name": "nindo-lite",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "setup": "bun db:push && bun ./setup.ts && bun --filter=@nindo-lite/* setup",
+    "check": "bun --filter=* --parallel check",
+    "dev": "bun --filter=* --parallel dev",
+    "dev:frontend": "bun --filter=@nindo-lite/frontend dev",
+    "dev:backend": "bun --filter=@nindo-lite/backend dev",
+    "db:push": "bun --filter=@nindo-lite/backend db:push",
+    "db:studio": "bun --filter=@nindo-lite/backend db:studio"
+  }
+}

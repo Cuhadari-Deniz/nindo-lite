@@ -1,0 +1,39 @@
+{
+  "name": "@nindo-lite/backend",
+  "module": "src/index.ts",
+  "type": "module",
+  "exports": {
+    "./trpc": "./src/trpc/root-router.ts"
+  },
+  "scripts": {
+    "setup": "bun setup.ts",
+    "check": "vitest",
+    "dev": "bun --watch run src/index.ts",
+    "db:push": "bun drizzle-kit push --config=src/db/drizzle.config.ts",
+    "db:studio": "bun drizzle-kit studio --config=src/db/drizzle.config.ts"
+  },
+  "devDependencies": {
+    "@effect/vitest": "^0.20.5",
+    "@types/bun": "latest",
+    "@types/cors": "^2.8.17",
+    "drizzle-kit": "^0.30.6",
+    "tsx": "^4.19.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.1.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@effect/schema": "^0.75.5",
+    "@effect/sql-drizzle": "^0.32.5",
+    "@effect/sql-libsql": "^0.23.5",
+    "@libsql/client": "^0.15.2",
+    "@trpc/server": "^11.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.41.0",
+    "effect": "^3.14.5",
+    "superjson": "^2.2.2"
+  }
+}
