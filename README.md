@@ -2,7 +2,7 @@
 
 ## 📋 Requirements
 
-- **bun** - Fast JavaScript runtime and toolkit
+- **bun**
 - **node** - _(vitest currently hangs when running via bun)_
 - Don't forget to run `bun install` before starting
 
@@ -31,4 +31,4 @@ To launch the application simply run `bun dev`
 
 To run the tests run `bun check`
 
-⚠️ Currently `bun test` is not supported due to an compatibility issue with bun and vite
+⚠️ Currently `bun test` is not supported due to a compatibility issue with bun and vite
